@@ -1,3 +1,4 @@
+-n
 cache/cache.cc
 cache/cache_entry_roles.cc
 cache/cache_key.cc
@@ -52,6 +53,7 @@ db/db_impl/db_impl_open.cc
 db/db_impl/db_impl_readonly.cc
 db/db_impl/db_impl_secondary.cc
 db/db_impl/db_impl_write.cc
+db/db_impl/db_spdb_impl_write.cc
 db/db_info_dumper.cc
 db/db_iter.cc
 db/dbformat.cc
@@ -130,6 +132,7 @@ memory/memkind_kmem_allocator.cc
 memory/memory_allocator.cc
 memtable/alloc_tracker.cc
 memtable/hash_linklist_rep.cc
+memtable/hash_spdb_rep.cc
 memtable/hash_skiplist_rep.cc
 memtable/skiplistrep.cc
 memtable/vectorrep.cc
@@ -157,6 +160,12 @@ options/options_helper.cc
 options/options_parser.cc
 port/mmap.cc
 port/port_posix.cc
+port/win/env_default.cc
+port/win/env_win.cc
+port/win/io_win.cc
+port/win/port_win.cc
+port/win/win_logger.cc
+port/win/win_thread.cc
 port/stack_trace.cc
 table/adaptive/adaptive_table_factory.cc
 table/block_based/binary_search_index_reader.cc
@@ -183,6 +192,7 @@ table/block_based/partitioned_filter_block.cc
 table/block_based/partitioned_index_iterator.cc
 table/block_based/partitioned_index_reader.cc
 table/block_based/reader_common.cc
+table/block_based/table_pinning_policy.cc
 table/block_based/uncompression_dict_reader.cc
 table/block_fetcher.cc
 table/cuckoo/cuckoo_table_builder.cc
@@ -267,6 +277,7 @@ utilities/env_timed.cc
 utilities/fault_injection_env.cc
 utilities/fault_injection_fs.cc
 utilities/fault_injection_secondary_cache.cc
+utilities/injection_fs.cc
 utilities/leveldb_options/leveldb_options.cc
 utilities/memory/memory_util.cc
 utilities/merge_operators.cc
@@ -277,6 +288,7 @@ utilities/merge_operators/string_append/stringappend.cc
 utilities/merge_operators/string_append/stringappend2.cc
 utilities/merge_operators/uint64add.cc
 utilities/merge_operators/bytesxor.cc
+utilities/nosync_fs.cc
 utilities/object_registry.cc
 utilities/option_change_migration/option_change_migration.cc
 utilities/options/options_util.cc
@@ -309,3 +321,4 @@ utilities/ttl/db_ttl_impl.cc
 utilities/wal_filter.cc
 utilities/write_batch_with_index/write_batch_with_index.cc
 utilities/write_batch_with_index/write_batch_with_index_internal.cc
+
