@@ -320,8 +320,7 @@ utilities/ttl/db_ttl_impl.cc
 utilities/wal_filter.cc
 utilities/write_batch_with_index/write_batch_with_index.cc
 utilities/write_batch_with_index/write_batch_with_index_internal.cc
-speedb_registry.cc
-paired_filter/speedb_paired_bloom.cc
-paired_filter/speedb_paired_bloom_internal.cc
-pinning_policy/scoped_pinning_policy.cc
-
+plugin/speedb/speedb_registry.cc
+plugin/speedb/paired_filter/speedb_paired_bloom.cc
+plugin/speedb/paired_filter/speedb_paired_bloom_internal.cc
+plugin/speedb/pinning_policy/scoped_pinning_policy.cc
