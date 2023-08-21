@@ -2379,6 +2379,9 @@ impl Options {
             MemtableFactory::HashLinkList { bucket_count } => unsafe {
                 ffi::rocksdb_options_set_hash_link_list_rep(self.inner, bucket_count);
             },
+            MemtableFactory::HashSpdRepFactory { bucket_count } => unsafe {
+                ffi::rocksdb_options_set_hash_spdb_rep(self.inner, bucket_count);
+            },
         };
     }
 
@@ -3585,6 +3588,9 @@ pub enum MemtableFactory {
     HashLinkList {
         bucket_count: usize,
     },
+    HashSpdRepFactory {
+        bucket_count: usize,
+    }
 }
 
 /// Used by BlockBasedOptions::set_checksum_type.
